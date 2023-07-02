@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+body{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    
+}
+.container{
+    width: 90vw;
+    height: 100vh;
+    margin: 0 auto;
+   
+    
+}
+.nav{
+    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 20px 0;
+
+  
+}
+.btn-group{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.btn-group button{
+    width: 150px;
+    height: 35px;
+    outline: none;
+    margin: 0 3px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(98, 252, 180);
+    border: 2px solid rgb(98, 252, 180);
+    font-size: 15px;
+    font-weight: 100px;
+}
+
+.btn-group button:hover,
+.btn-group .btn-active{
+    background-color: rgb(77, 75, 75);
+    color: white;
+}
+
+.search input{
+    width: 20rem;
+    height: 35px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    color: rgb(83, 80, 80);
+    border: 2px solid rgb(98, 252, 180);
+
+}
+
+.products{
+   
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(4, minmax(200px, 1fr));
+   gap: 20px;
+}
+.box{
+    height: 15rem;
+    border: 4px solid wheat;
+    overflow: hidden;
+    
+}  
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+    
+}
+.box:hover img{
+    transform: scale(1.2);
+    transform-origin: top;
+    
+}

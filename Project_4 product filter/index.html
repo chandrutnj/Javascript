@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product filtter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="btn-group">
+                <button data-filter="all" class="btn-active" >All</button>
+                <button data-filter="ice-cream">Ice cream</button>
+                <button data-filter="cake">Cake</button>
+                <button data-filter="pizza">Pizza</button>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search item" class="search-item">
+            </div>
+        </div>
+        <div class="products" >
+            <div class="box" data-filter="ice-cream">
+                <img src="images/venilla ice cream.jpg" alt="">
+            </div>
+             <div class="box" data-filter="ice-cream">
+                <img src="images/staberry ice cream.jpg" alt="">
+            </div>
+            <div class="box" data-filter="ice-cream">
+                <img src="images/chocolate ice cream.jpg" alt="">
+            </div>
+            <div class="box" data-filter="ice-cream">
+                <img src="images/blueberry _ice cream.avif" alt="">
+            </div>
+            <div class="box" data-filter="pizza">
+                <img src="images/Veggie Pizza.jpg" alt="">
+            </div>
+            <div class="box" data-filter="pizza">
+                <img src="images/margherita pizza.jpg" alt="">
+            </div>
+            <div class="box" data-filter="pizza">
+                <img src="images/BBQ Chicken Pizza.jpg" alt="">
+            </div>
+            <div class="box" data-filter="cake">
+                <img src="images/honey cake.jpg" alt="">
+            </div>
+            <div class="box" data-filter="cake">
+                <img src="images/black forest cake.jpg" alt="">
+            </div>
+            <div class="box" data-filter="cake">
+                <img src="images/white forest cake.jpg" alt="">
+            </div>
+            <div class="box" data-filter="cake">
+                <img src="images/White Velvet Cake.jpg" alt="">
+            </div>
+            
+          
+        </div>
+    </div>
+   <script src="script.js"></script> 
+</body>
+</html>

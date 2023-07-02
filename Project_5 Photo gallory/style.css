@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    background-color: gray;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+}
+.img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center center;
+    background-color: white;
+    padding: 3px;
+    border-radius: 3px;
+}
+#modal{
+    background-color: rgba(109, 107, 107, 0.589);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(2px);
+    display: none;
+}
+#modal.active{
+    display: grid;
+    place-items: center;
+}
+#img{
+    min-width: 50%;
+    min-height: 50%;
+    border: 3px solid wheat;
+    box-shadow: 5px 5px 10px black;
+}

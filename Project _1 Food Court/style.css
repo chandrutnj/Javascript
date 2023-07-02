@@ -1,0 +1,369 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: auto;
+    width: 100%;
+    background-color: rgb(255, 223, 228);
+    background-image: linear-gradient(rgb(214, 241, 171), rgb(248, 222, 226));
+    font-family: 'Courier New', Courier, monospace;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    height: auto;
+    margin: 0 10%;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.cart-title{
+    font: 20px bold;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom:1rem;
+    color: rgb(14, 90, 4);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header{
+    padding:   5px 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(163, 38, 16, 0.952);
+    /* background-image: linear-gradient(to left, rgba(255, 166, 0, 0.411),rgba(39, 224, 39, 0.562)); */
+    
+    border-bottom: 2px solid rgba(0, 0, 0, 0.514);
+    box-shadow: 0  3px 5px rgba(0, 0, 0, 0.514);
+    align-items: center;
+    position:sticky;
+    z-index: 99;
+    
+}
+.header a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 2rem ;
+    font-weight: bold;
+    position: relative;
+    text-shadow: 2px 3px 2px black;
+    transition: font-size 0.5s ;
+    
+}
+.food:hover a{
+    font-size: 2.2rem;
+}
+
+.food-icon{
+    font-size: 25px;
+    position: relative;
+    left: 5px;
+    top: 2px;
+    color: rgb(255, 243, 243);
+    font-weight: bold;
+    transition: font-size 0.5s ;
+}
+.food:hover .food-icon{
+    font-size: 1.8rem;
+    
+}
+.banner-box{
+    background-image: url('foodimages/banner2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+
+}
+
+.banner{
+    padding:40px 0;
+    border-bottom: 1px solid steelblue;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.514);
+}
+.banner h1{
+    text-shadow: 2px 2px 5px rgb(255, 255, 8),
+                 2px 2px 5px yellow;
+    
+    color: white;
+    
+}
+.banner h3{
+    color: rgb(255, 209, 91);
+    text-shadow: 1px 1px 3px rgb(253, 253, 240) ; 
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+main{
+    position: relative;
+}
+.cart-list{
+    position: absolute;
+    right: 0;
+    top:-10000px;
+    z-index: 98;
+    width: 350px;
+    height: 30rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: rgba(236, 255, 232, 0.918);
+    padding: 20px;
+    box-shadow: 0 1px 4px rgb(15, 15, 15); 
+}
+.cart-active{
+    top: -150px;
+    transition:0.2s;
+}
+.cart-content{
+    margin: 2px;
+}
+.cart-img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid rgba(0, 0, 0, 0.432) ;
+    padding: 5px;
+}
+.trash{
+    color: rgb(211, 5, 5);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    
+    
+}
+
+.cart-price{
+    font-size: 22px;
+    font-weight: bold;
+    
+}
+.cart-amt{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(7, 4, 3)
+}
+.close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.order-btn{
+    outline: none;
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.87);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cart-total{
+    font-weight: bold;
+    font-size: 25px;
+}
+.detail-box{
+    display: grid;
+    row-gap: 1.2rem;
+
+}
+.price-box{
+    display: flex;
+    justify-content: space-between;
+
+}
+.cart-qty{
+    width: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.158);
+    outline: none;
+    text-align: center;
+    background-color: rgba(100, 109, 109, 0.596);
+    border: none;
+    color: rgb(5, 5, 5);
+    font-size: 15px;
+    
+}
+.cart-box{
+    display: grid;
+    grid-template-columns: 34% 58% 10%;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.432);
+    
+}
+.cart{
+    color: aliceblue;
+    font-size: 2rem;
+    padding-top: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.cart:hover .cart-count{
+    background-color: rgba(9, 11, 14, 0.445);
+}
+
+
+
+#cart-icon{
+    transition:color 0.5s;
+    padding-top: 10px;
+    margin-bottom: -10px;
+    
+    
+}
+.cart-count{
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 25px;
+    height: 25px;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 50%;
+    transition:  background-color 0.5s;
+    
+}
+
+
+#cart-icon:hover{
+    color: rgb(185, 231, 110);
+}
+
+
+
+
+main{
+    
+    display: flex;
+    gap: 0.2rem;
+    justify-content: center;
+    flex-flow: wrap row;
+    padding: 20px;
+    
+    
+}
+
+.food-box{
+    width: 200px;
+    height: 228px;
+    margin: 10px;
+/*     background-color: rgba(159, 216, 199, 0.384);
+ */    padding: 22px;
+/*     border: 2px solid gray;
+ */    /* border-radius: 5px; */
+    border-bottom-right-radius: 24px;
+    box-shadow: 5px 10px 15px rgb(20, 20, 20);
+    overflow: hidden;
+
+    
+}
+.food-box img{
+    width: 100%;
+    height: 80%;
+    /* border-radius: 10px; */
+/*     border: 2px solid rgb(13, 197, 13);
+ */    outline: none;
+}
+
+.add-cart{
+    width: 35px;
+    height: 35px;
+    margin-right: -23px;
+    margin-bottom: -24px;
+    border-bottom-right-radius:25px ;
+    padding-top: 5px;
+    text-align: center;
+    color: rgb(21, 30, 56);
+    cursor: pointer;
+    font-size: 1.5rem;
+    background-color: rgb(211, 143, 16);
+}
+
+.food-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+.food-title{
+    font-weight: bold;
+    color: rgb(238, 20, 20);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+}
+.food-price{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+.pic:hover img{
+    transform: scale(1.1);
+}
+.pic{
+    overflow: hidden;
+    box-shadow: -2px -2px 10px rgb(6, 38, 56);
+    
+    
+}
+
+.pic img{
+    transition: 0.5s;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    display: block;
+    
+    
+}
+
+.add-cart:hover{
+    background-color: rgb(245, 194, 100);
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+/* animation for food images*/
+
+.animation{
+    animation-name: slide;
+    animation-duration: 1.5s ;
+    animation-timing-function: linear;
+    animation-delay: 0.2;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+@keyframes slide{
+
+    0%{
+        transform: translatey(-100px);
+    }
+    50%{
+        transform: translateY(0) ;
+    }
+    60%{
+        transform:scale(1.1);
+    }
+    80%{
+        transform:scale(1.3);
+    }
+    100%{
+        transform:scale(1.2);
+    }
+}
